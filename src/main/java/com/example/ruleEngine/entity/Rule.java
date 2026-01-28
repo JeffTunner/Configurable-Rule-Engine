@@ -22,7 +22,7 @@ public class Rule {
 
     private String name;
     private boolean active;
-    private String priority;
+    private int priority;
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "rule", cascade = CascadeType.ALL)

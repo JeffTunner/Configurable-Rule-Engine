@@ -16,6 +16,6 @@ public class RuleResponseDto {
     private Long id;
     private String name;
     private boolean active;
-    private String priority;
+    private int priority;
     private LocalDateTime createdAt;
 }
