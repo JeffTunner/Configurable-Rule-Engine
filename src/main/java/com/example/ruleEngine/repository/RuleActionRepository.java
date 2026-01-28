@@ -2,5 +2,5 @@ package com.example.ruleEngine.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RuleAction extends JpaRepository<RuleAction, Long> {
+public interface RuleActionRepository extends JpaRepository<RuleActionRepository, Long> {
 }
