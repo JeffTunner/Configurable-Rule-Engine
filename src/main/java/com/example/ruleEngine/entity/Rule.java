@@ -28,6 +28,6 @@ public class Rule {
     @OneToMany(mappedBy = "rule", cascade = CascadeType.ALL)
     private List<RuleCondition> conditions;
 
-    @OneToOne(mappedBy = "rule", cascade = CascadeType.ALL)
-    private RuleAction action;
+    @OneToMany(mappedBy = "rule", cascade = CascadeType.ALL)
+    private List<RuleAction> action;
 }

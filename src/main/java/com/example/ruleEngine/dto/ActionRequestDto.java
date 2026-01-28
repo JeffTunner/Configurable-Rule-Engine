@@ -1,26 +1,20 @@
-package com.example.ruleEngine.entity;
+package com.example.ruleEngine.dto;
 
-import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class RuleAction {
+public class ActionRequestDto {
 
-    @Id
-    @GeneratedValue
-    private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "rule_id")
-    private Rule rule;
-
+    @NotBlank(message = "Field should not be blank")
     private String outputField;
+
+    @NotBlank(message = "Field should not be blank")
     private String outputValue;
 }
