@@ -70,6 +70,8 @@ public class RuleService {
     public RuleResponseDto createRules(RuleRequestDto requestDto) {
         Rule rule = toEntity(requestDto);
         rule.setCreatedAt(LocalDateTime.now());
+        rule.setActive(true);
+        rule.setPriority(1);
         Rule saved = ruleRepository.save(rule);
         return toDto(saved);
     }
