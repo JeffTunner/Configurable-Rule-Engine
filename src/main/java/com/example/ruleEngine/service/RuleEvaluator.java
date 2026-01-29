@@ -30,7 +30,7 @@ public class RuleEvaluator {
         String operator = condition.getOperator();
         String expectedValue = condition.getValue();
 
-        switch (condition.getDatatype()) {
+        switch (condition.getDatatype().toUpperCase()) {
 
             case "NUMBER" -> {
                 double actual = Double.parseDouble(actualValue.toString());
@@ -51,7 +51,7 @@ public class RuleEvaluator {
                 return switch (operator) {
 
                     case "=" -> actualValue.toString().equals(expectedValue);
-                    case "!" -> !actualValue.toString().equals(expectedValue);
+                    case "!=" -> !actualValue.toString().equals(expectedValue);
                     default -> false;
                 };
             }
