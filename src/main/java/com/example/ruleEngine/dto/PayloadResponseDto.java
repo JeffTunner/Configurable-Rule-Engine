@@ -5,11 +5,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Map;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 public class PayloadResponseDto {
 
-    private String action;
+    private Map<String, Object> result;
 }
