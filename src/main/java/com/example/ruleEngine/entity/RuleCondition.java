@@ -23,6 +23,8 @@ public class RuleCondition {
 
     private String fieldName;
     private String operator;
+
+    @Column(name = "\"value\"")
     private String value;
     private String datatype;
 }

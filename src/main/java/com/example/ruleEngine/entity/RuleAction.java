@@ -22,5 +22,6 @@ public class RuleAction {
     private Rule rule;
 
     private String outputField;
+
     private String outputValue;
 }
